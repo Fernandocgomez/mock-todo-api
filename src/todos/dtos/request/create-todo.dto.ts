@@ -1,3 +1,4 @@
 export class CreateTodoDto {
-    title: string;
+    readonly title: string;
+    readonly content: string;
 }
