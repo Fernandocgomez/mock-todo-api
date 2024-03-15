@@ -13,6 +13,6 @@ export class TodosService {
   async create(createTodo: CreateTodoDto): Promise<Todo> {
     const createdCat = new this.todoModel(createTodo);
 
-    return await createdCat.save();
+    return createdCat.save();
   }
 }
