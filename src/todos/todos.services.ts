@@ -15,4 +15,8 @@ export class TodosService {
 
     return createdTodo.save();
   }
+
+  async getAllTodos(): Promise<Todo[]> {
+    return this.todoModel.find().exec();
+  }
 }
