@@ -2,6 +2,7 @@ import { Body, Controller, Get, Post } from '@nestjs/common';
 import { TodosService } from './todos.services';
 import { CreateTodoDto } from './dtos/request/create-todo.dto';
 import { Todo } from './interfaces/todo.interface';
+import { GetAllTodosDto } from './dtos/response/get-all-todos.dto';
 
 @Controller('todos')
 export class TodosController {
@@ -13,7 +14,7 @@ export class TodosController {
   }
 
   @Get()
-  async getAllTodos(): Promise<Todo[]> {
+  async getAllTodos(): Promise<GetAllTodosDto> {
     return this.todosService.getAllTodos();
   }
 }
